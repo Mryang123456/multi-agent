@@ -26,7 +26,6 @@
 
 通信与协调模式
 - 主 agent 作为协调中心：接收外部请求后依据策略将任务分配给一个或多个子 agent；主 agent 负责合并结果与最终回复。
-- Agent-to-agent 直接通信：`tools.agentToAgent.enabled = true`，允许子 agent 之间直接请求/回调（例如 frontend 请求 backend 的接口实现建议）。
 - 中央会话/记忆存储：`memorySearch.sources` 包含 `memory` 与 `sessions`，插件（catpaw-memory）为跨 agent 的上下文共享提供支持。
 - 排队与中断：`messages.queue.mode = interrupt`，允许新高优先级消息中断当前处理。
 - 循环检测与断路：`loopDetection.enabled = true` 且存在 `globalCircuitBreakerThreshold`，防止 agent 间出现无限循环调用。
